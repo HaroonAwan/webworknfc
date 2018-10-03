@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+    .mySlides {display:inline-block}
+    .w3-left, .w3-right, .w3-badge {cursor:pointer}
+    .w3-badge {height:13px;width:13px;padding:0}
+    </style>
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="w3-content w3-display-container" style="max-width:800px">
+  <img class="mySlides" src="images/Admissions-Open_960_400.jpg" style="width:100%">
+  <img class="mySlides" src="images/ChemicalIT_2017_960_400.jpg" style="width:100%">
+  <img class="mySlides" src="images/ElectricalIT_2017_960_400.jpg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<div class="section1">
+  <div class="logo-images"id="img1" > </div>
+  <div class="logo-images" id="img2" > </div>
+  <div class="logo-images" id="img3" > </div>
+  <div class="logo-images" id="img4" > </div>
+  <div class="logo-images" id="img5" > </div>
+  <div class="logo-images" id="img6" > </div>
+  <div class="logo-images"id="img7" > </div>
+  <div class="logo-images"id="img8" > </div>
+   </div>
+
+<div class="icons">
+    
+</div>
+
+  <div class="professors">
+
+  <div class="ar">
+    <h4>CHANCELLOR</h4>
+    <br>
+    <img class="img" src="images/ar.jpeg">
+
+    <div class="info">
+      <a href="#">Mr.Arif-ur-Rehman Alvi</a>
+      <br>
+      <br>
+      <p>Chancellor </p>
+      <a href="#">Profile</a>
+    </div>
+    
+  </div>
+
+  <div class="ak">
+    <h4>VICE CHANCELLOR</h4>
+    <br>
+    <img class="img" src="images/ak.jpg">
+
+    <div class="info">
+      <a href="#">Dr.Akhtar Ali Malik</a>
+      <br>
+      <br>
+      <p>Professor</p>
+      <p>Vice Chancellor</p>
+      <a href="#">VC Message</a>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+     
+</body>
+</html>
